@@ -27,6 +27,7 @@ services:
     container_name: peer0.sales1.acornpub.com
     image: hyperledger/fabric-peer:1.4.3
     environment:
+      - GODEBUG=netdns=go
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
       - CORE_PEER_ID=peer0.sales1.acornpub.com
       - CORE_LOGGING_PEER=debug
@@ -56,6 +57,7 @@ services:
     container_name: peer1.sales1.acornpub.com
     image: hyperledger/fabric-peer:1.4.3
     environment:
+      - GODEBUG=netdns=go
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
       - CORE_PEER_ID=peer1.sales1.acornpub.com
       - CORE_LOGGING_PEER=debug
@@ -82,6 +84,7 @@ services:
     container_name: peer0.customer.acornpub.com
     image: hyperledger/fabric-peer:1.4.3
     environment:
+      - GODEBUG=netdns=go
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
       - CORE_PEER_ID=peer0.customer.acornpub.com
       - CORE_LOGGING_PEER=debug
@@ -108,6 +111,7 @@ services:
     container_name: peer1.customer.acornpub.com
     image: hyperledger/fabric-peer:1.4.3
     environment:
+      - GODEBUG=netdns=go
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
       - CORE_PEER_ID=peer1.customer.acornpub.com
       - CORE_LOGGING_PEER=debug
@@ -135,6 +139,7 @@ services:
     image: hyperledger/fabric-tools
     tty: true
     environment:
+      - GODEBUG=netdns=go
       - GOPATH=/opt/gopath
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
       - FABRIC_LOGGING_SPEC=INFO
