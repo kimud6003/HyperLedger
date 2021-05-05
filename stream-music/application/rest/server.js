@@ -14,25 +14,25 @@ app.get('/api/getWallet', function (req, res) {
 
     sdk.send(false, 'getWallet', args, res);
 });
-app.get('/api/setMusic', function (req, res) {
+app.get('/api/setCar', function (req, res) {
     var title = req.query.title;
     var singer = req.query.singer;
     var price = req.query.price;
     var walletid = req.query.walletid;
 
     let args = [title, singer, price, walletid];
-    sdk.send(true, 'setMusic', args, res);
+    sdk.send(true, 'setCar', args, res);
 });
-app.get('/api/getAllmusic', function (req, res) {
+app.get('/api/getAllCar', function (req, res) {
     let args = [];
-    sdk.send(false, 'getAllMusic', args, res);
+    sdk.send(false, 'getAllCar', args, res);
 });
-app.get('/api/purchaseMusic', function (req, res) {
+app.get('/api/purchaseCar', function (req, res) {
     var walletid = req.query.walletid;
-    var key = req.query.musickey;
+    var key = req.query.Carkey;
     
     let args = [walletid, key];
-    sdk.send(true, 'purchaseMusic', args, res);
+    sdk.send(true, 'purchaseCar', args, res);
 });
 app.use(express.static(path.join(__dirname, './client')));
 

@@ -21,7 +21,7 @@ async function send(type, func, args, res){
         await gateway.connect(ccpPath, { wallet, identity: 'user1', discovery: { enabled: true, asLocalhost: true } });
 
         const network = await gateway.getNetwork('channelsales1');
-        const contract = network.getContract('music-cc');
+        const contract = network.getContract('smartcar-cc');
 
         if(type){
             await contract.submitTransaction(func, ...args);

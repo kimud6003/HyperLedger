@@ -24,7 +24,7 @@ async function main() {
 
         const network = await gateway.getNetwork('channelsales1');
 
-        const contract = network.getContract('music-cc');
+        const contract = network.getContract('smartcar-cc');
 
         var walletid = process.argv[2];
 

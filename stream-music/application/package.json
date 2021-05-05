@@ -1,7 +1,7 @@
 {
-    "name": "fabric-acorn-music",
+    "name": "fabric-smartCar",
     "version": "1.0.0",
-    "description": "Hyperledger Fabric Acorn Music Application",
+    "description": "Hyperledger Fabric Smart Car  Application",
     "main": "server.js",
     "dependencies": {
         "fabric-ca-client": "^1.4.0",
@@ -17,8 +17,6 @@
     "keywords": [
         "Hyperledger",
         "Fabric",
-        "Acorn",
-        "Music",
         "Application"
     ]
 }

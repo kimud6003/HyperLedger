@@ -15,10 +15,10 @@
     "channels": {
         "channelsales1": {
             "orderers": [
-                "orderer.acornpub.com"
+                "orderer.smartcar.com"
             ],
             "peers": {
-                "peer0.sales1.acornpub.com": {}
+                "peer0.sales1.smartcar.com": {}
             }
         }
     },
@@ -26,49 +26,49 @@
         "Sales1": {
             "mspid": "Sales1Org",
             "peers": [
-                "peer0.sales1.acornpub.com"
+                "peer0.sales1.smartcar.com"
             ],
             "certificateAuthorities": [
-                "ca.sales1.acornpub.com"
+                "ca.sales1.smartcar.com"
             ],
             "adminPrivateKey": {
-                "path":"../../basic-network/crypto-config/peerOrganizations/sales1.acornpub.com/users/Admin@sales1.acornpub.com/msp/keystore/8fc3bcb369b2816dd01bfb4a70b1d1092dca709222260a92d27fcd92aa62ff6b_sk"
+                "path":"../../basic-network/crypto-config/peerOrganizations/sales1.smartcar.com/users/Admin@sales1.smartcar.com/msp/keystore/95fd0afadd873f85dc50de6fe177bb1aadb7450e5a693b451e25064737ce2b47_sk"
             },
             "signedCert":{
-                "path":"../../basic-network/crypto-config/peerOrganizations/sales1.acornpub.com/users/Admin@sales1.acornpub.com/msp/signcerts/Admin@sales1.acornpub.com-cert.pem"
+                "path":"../../basic-network/crypto-config/peerOrganizations/sales1.smartcar.com/users/Admin@sales1.smartcar.com/msp/signcerts/Admin@sales1.smartcar.com-cert.pem"
             }
         }
     },
     "orderers": {
-        "orderer.acornpub.com": {
+        "orderer.smartcar.com": {
             "url": "grpc://localhost:7050",
             "grpcOptions":{
-                "ssl-target-name-override":"orderer.acornpub.com",
+                "ssl-target-name-override":"orderer.smartcar.com",
                 "grpc-max-send-message-length": -1
             },
             "tlsCACerts": {
-                "path": "../../basic-network/crypto-config/ordererOrganizations/acornpub.com/orderers/orderer.acornpub.com/msp/tlscacerts/tlsca.acornpub.com-cert.pem"
+                "path": "../../basic-network/crypto-config/ordererOrganizations/smartcar.com/orderers/orderer.smartcar.com/msp/tlscacerts/tlsca.smartcar.com-cert.pem"
             }
         }
     },
     "peers": {
-        "peer0.sales1.acornpub.com": {
+        "peer0.sales1.smartcar.com": {
             "url": "grpc://localhost:7051",
             "tlsCACerts": {
-                "path": "../../basic-network/crypto-config/peerOrganizations/sales1.acornpub.com/peers/peer0.sales1.acornpub.com/msp/tlscacerts/tlsca.sales1.acornpub.com-cert.pem"
+                "path": "../../basic-network/crypto-config/peerOrganizations/sales1.smartcar.com/peers/peer0.sales1.smartcar.com/msp/tlscacerts/tlsca.sales1.smartcar.com-cert.pem"
             },
             "grpcOptions": {
-                "ssl-target-name-override": "peer1.sales1.acornpub.com",
-                "hostnameOverride": "peer1.sales1.acornpub.com"
+                "ssl-target-name-override": "peer1.sales1.smartcar.com",
+                "hostnameOverride": "peer1.sales1.smartcar.com"
             }
         }
     },
     "certificateAuthorities": {
-        "ca.sales1.acornpub.com": {
+        "ca.sales1.smartcar.com": {
             "url": "http://localhost:7054",
-            "caName": "ca.sales1.acornpub.com",
+            "caName": "ca.sales1.smartcar.com",
             "tlsCACerts": {
-                "path": "../../basic-network/crypto-config/peerOrganizations/sales1.acornpub.com/ca/ca.sales1.acornpub.com-cert.pem"
+                "path": "../../basic-network/crypto-config/peerOrganizations/sales1.smartcar.com/ca/ca.sales1.smartcar.com-cert.pem"
             },
             "registrar":{
                 "enrollId": "admin",
