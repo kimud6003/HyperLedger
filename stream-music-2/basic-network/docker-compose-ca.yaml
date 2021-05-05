@@ -7,6 +7,7 @@ services:
   ca.sales1.acornpub.com:
     image: hyperledger/fabric-ca
     environment:
+      - GODEBUG=netdns=go
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.sales1.acornpub.com
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.sales1.acornpub.com-cert.pem
@@ -23,6 +24,7 @@ services:
   ca.sales2.acornpub.com:
     image: hyperledger/fabric-ca
     environment:
+      - GODEBUG=netdns=go
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.sales2.acornpub.com
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.sales2.acornpub.com-cert.pem
