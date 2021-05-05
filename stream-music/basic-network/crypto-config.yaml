@@ -1,18 +1,18 @@
 OrdererOrgs:
   - Name: Orderer
-    Domain: acornpub.com
+    Domain: smartcar.com
     Specs:
       - Hostname: orderer
 
 PeerOrgs:
   - Name: Sales1
-    Domain: sales1.acornpub.com
+    Domain: sales1.smartcar.com
     Template:
       Count: 2
     Users:
       Count: 1
-  - Name: Customer
-    Domain: customer.acornpub.com
+  - Name: Sales2
+    Domain: sales2.smartcar.com
     Template:
       Count: 2
     Users:

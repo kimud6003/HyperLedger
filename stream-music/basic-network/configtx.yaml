@@ -3,29 +3,29 @@ Organizations:
     - &OrdererOrg
         Name: OrdererOrg
         ID: OrdererOrg
-        MSPDir: crypto-config/ordererOrganizations/acornpub.com/msp
+        MSPDir: crypto-config/ordererOrganizations/smartcar.com/msp
 
     - &Sales1Org
         Name: Sales1Org
         ID: Sales1Org
-        MSPDir: crypto-config/peerOrganizations/sales1.acornpub.com/msp
+        MSPDir: crypto-config/peerOrganizations/sales1.smartcar.com/msp
         AnchorPeers:
-            - Host: peer0.sales1.acornpub.com
+            - Host: peer0.sales1.smartcar.com
               Port: 7051
 
-    - &CustomerOrg
-        Name: CustomerOrg
-        ID: CustomerOrg
-        MSPDir: crypto-config/peerOrganizations/customer.acornpub.com/msp
+    - &Sales2Org
+        Name: Sales2Org
+        ID: Sales2Org
+        MSPDir: crypto-config/peerOrganizations/sales2.smartcar.com/msp
         AnchorPeers:
-            - Host: peer0.customer.acornpub.com
+            - Host: peer0.sales2.smartcar.com
               Port: 7051
 
 Orderer: &OrdererDefaults
 
     OrdererType: solo
     Addresses:
-        - orderer.acornpub.com:7050
+        - orderer.smartcar.com:7050
     BatchTimeout: 2s
     BatchSize:
         MaxMessageCount: 10
@@ -50,11 +50,11 @@ Profiles:
             SampleConsortium:
                 Organizations:
                     - *Sales1Org
-                    - *CustomerOrg
+                    - *Sales2Org
     Channel1:
         Consortium: SampleConsortium
         Application:
             <<: *ApplicationDefaults
             Organizations:
                 - *Sales1Org
-                - *CustomerOrg
+                - *Sales2Org
